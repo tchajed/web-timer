@@ -12,9 +12,15 @@
   "author": "Tej Chajed",
   "license": "MIT",
   "devDependencies": {
+    "@types/browserify": "^12.0.37",
+    "@types/gulp": "^4.0.10",
+    "@types/vinyl-source-stream": "^0.0.30",
+    "browserify": "^17.0.0",
     "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "typescript": "^5.0.2"
+    "tsify": "^5.0.4",
+    "typescript": "^5.0.2",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "ts-node": "^10.9.1"
