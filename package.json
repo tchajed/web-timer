@@ -1,0 +1,22 @@
+{
+  "name": "web-timer",
+  "version": "0.1.0",
+  "description": "Full screen timer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "timer"
+  ],
+  "author": "Tej Chajed",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
