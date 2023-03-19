@@ -1,28 +1,36 @@
-import gulp from "gulp";
 import browserify from "browserify";
-import source from "vinyl-source-stream";
+import fancy_log from "fancy-log";
+import gulp from "gulp";
 import tsify from "tsify";
+import source from "vinyl-source-stream";
+import watchify from "watchify";
 const paths = {
   pages: ["src/*.html"],
 }
+
+const watchedBrowserify = watchify(
+  browserify({
+    basedir: ".",
+    debug: true,
+    entries: ["src/main.ts"],
+    cache: {},
+    packageCache: {},
+  })
+    .plugin(tsify)
+);
 
 gulp.task("copy-html", () => {
   return gulp.src(paths.pages).pipe(gulp.dest("dist"));
 })
 
-gulp.task(
-  "default",
-  gulp.series(gulp.parallel("copy-html"), () => {
-    return browserify({
-      basedir: ".",
-      debug: true,
-      entries: ["src/main.ts"],
-      cache: {},
-      packageCache: {},
-    })
-      .plugin(tsify)
-      .bundle()
-      .pipe(source("bundle.js"))
-      .pipe(gulp.dest("dist"));
-  })
-);
+function bundle() {
+  return watchedBrowserify
+    .bundle()
+    .on("error", fancy_log)
+    .pipe(source("bundle.js"))
+    .pipe(gulp.dest("dist"));
+}
+
+gulp.task("default", gulp.series(gulp.parallel("copy-html"), bundle));
+watchedBrowserify.on("update", bundle);
+watchedBrowserify.on("log", fancy_log);

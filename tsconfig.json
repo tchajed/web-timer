@@ -1,5 +1,7 @@
 {
-  "files": ["src/*.ts"],
+  "include": [
+    "src/*.ts"
+  ],
   "compilerOptions": {
     "noImplicitAny": true,
     "target": "es5",
