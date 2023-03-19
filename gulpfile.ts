@@ -6,7 +6,8 @@ import path from "path";
 import tsify from "tsify";
 import source from "vinyl-source-stream";
 import watchify from "watchify";
-import browserSync from "browser-sync";
+import browserSyncPkg from "browser-sync";
+const browserSync = browserSyncPkg.create();
 
 const watchedBrowserify = watchify(
   browserify({
@@ -32,7 +33,8 @@ export function styles() {
     .pipe(less({
       paths: [path.join(__dirname, "less", "includes")]
     }))
-    .pipe(gulp.dest("./dist/css"));
+    .pipe(gulp.dest("./dist/css"))
+    .pipe(browserSync.stream());
 }
 
 function bundle() {
@@ -53,14 +55,16 @@ export function watch() {
 }
 
 export function serve() {
-  browserSync({
-    server: {
-      baseDir: "dist",
-    }
-  })
+  browserSync.init({
+    server: "./dist",
+  });
+
+  watch();
+
   gulp.watch(
     ["dist/*.html", "dist/css/*.css", "dist/*.js"],
     { cwd: "dist" },
     browserSync.reload,
   );
+
 };
