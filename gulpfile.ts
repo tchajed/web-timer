@@ -22,17 +22,18 @@ const watchedBrowserify = watchify(
 const paths = {
   pages: ["src/*.html"],
 }
-gulp.task("copy-html", () => {
-  return gulp.src(paths.pages).pipe(gulp.dest("dist"));
-})
 
-gulp.task("styles", () => {
+export function copyHtml() {
+  return gulp.src(paths.pages).pipe(gulp.dest("dist"));
+}
+
+export function styles() {
   return gulp.src("./styles/*.less")
     .pipe(less({
       paths: [path.join(__dirname, "less", "includes")]
     }))
     .pipe(gulp.dest("./dist/css"));
-});
+}
 
 function bundle() {
   return watchedBrowserify
@@ -42,11 +43,16 @@ function bundle() {
     .pipe(gulp.dest("dist"));
 }
 
-gulp.task("default", gulp.series(gulp.parallel("copy-html", "styles"), bundle));
+exports.default = gulp.series(gulp.parallel(copyHtml, styles), bundle);
 watchedBrowserify.on("update", bundle);
 watchedBrowserify.on("log", fancy_log);
 
-gulp.task("serve", () => {
+export function watch() {
+  gulp.watch(["src/*.html"], {}, copyHtml);
+  gulp.watch(["styles/*.less"], {}, styles);
+}
+
+export function serve() {
   browserSync({
     server: {
       baseDir: "dist",
@@ -57,4 +63,4 @@ gulp.task("serve", () => {
     { cwd: "dist" },
     browserSync.reload,
   );
-});
+};
