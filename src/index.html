@@ -2,11 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <title>Hello World!</title>
+    <title>Timer</title>
     <link href="/css/main.css" rel="stylesheet"/>
   </head>
   <body>
-    <p id="greeting">Loading ...</p>
+    <h1 contenteditable="true">task description</h1>
+    <div id="counters">
+      <span id="min" class="active">3</span>
+      <span id="min-label" class="label">m</span>
+      <span id="sec" class="inactive">07</span>
+      <span id="sec-label" class="label">s</span>
+    </div>
+    <div id="buttons">
+      <button type="button" id="start_stop">start</button>
+      <button type="button" id="reset">reset</button>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>
