@@ -1,73 +1,38 @@
-import { State, Timer } from "./timer";
+import { State } from "./timer";
+import timer from "./timer_controller";
 
-const timer = new Timer();
 const dom = {
-  min: document.getElementById("min"),
-  sec: document.getElementById("sec"),
   start_stop_btn: document.getElementById("start_stop"),
   reset_btn: document.getElementById("reset"),
-}
-var intervalId: ReturnType<typeof setInterval> = null;
-
-function updateTime() {
-  const totalSec = timer.secondsElapsed();
-  const min = Math.round(totalSec / 60);
-  const sec = Math.round(totalSec % 60);
-  dom.min.innerText = `${min}`;
-  dom.sec.innerText = `${sec}`.padStart(2, "0");
+  task: document.getElementById("task"),
 }
 
-function stopUpdateInterval() {
-  if (intervalId != null) {
-    clearInterval(intervalId);
-    intervalId = null;
+/// Set up task/window hash UI.
+
+function hashToTask(hash: string) {
+  var text = decodeURI(window.location.hash);
+  if (text[0] == "#") {
+    text = text.substring(1, text.length);
   }
+  return text;
 }
 
-function updateDom() {
-  if (timer.state == State.Running) {
-    dom.min.classList.add("active");
-    dom.sec.classList.add("active");
-    if (intervalId == null) {
-      intervalId = setInterval(updateTime, 200);
-    }
-    dom.start_stop_btn.innerText = "pause";
-  } else if (timer.state == State.NotStarted) {
-    stopUpdateInterval();
-    dom.min.classList.remove("active");
-    dom.sec.classList.remove("active");
-    dom.start_stop_btn.innerText = "start";
-  } else {
-    // timer.state == State.Paused
-    stopUpdateInterval();
-    updateTime();
-    dom.min.classList.remove("active");
-    dom.sec.classList.remove("active");
-    dom.start_stop_btn.innerText = "resume";
-  }
+if (window.location.hash) {
+  var text = hashToTask(window.location.hash);
+  dom.task.innerText = text;
 }
 
-function start() {
-  timer.start();
-  updateDom();
-}
+dom.task.addEventListener("focusout", e => {
+  window.location.hash = dom.task.innerText;
+});
 
-function pause() {
-  timer.pause();
-  updateDom();
-}
-
-function reset() {
-  timer.reset();
-  updateDom();
-  updateTime();
-}
+/// Set up timer UI.
 
 function startStop() {
-  if (timer.state == State.NotStarted || timer.state == State.Paused) {
-    start();
+  if (timer.state() == State.NotStarted || timer.state() == State.Paused) {
+    timer.start();
   } else {
-    pause();
+    timer.pause();
   }
 }
 
@@ -76,5 +41,5 @@ dom.start_stop_btn.addEventListener("click", e => {
 });
 
 dom.reset_btn.addEventListener("click", e => {
-  reset();
+  timer.reset();
 });
