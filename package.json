@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "Full screen timer",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel serve src/index.html",
     "build": "parcel build --public-url '.'"
   },
   "keywords": [

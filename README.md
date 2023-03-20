@@ -15,4 +15,5 @@ npm install
 npm run build
 ```
 
-Run `npm run start` to run the parcel development server. This is an alias for `npx parcel`.
+Run `npm run start` to run the parcel development server. This is an alias for
+`npx parcel serve`.
