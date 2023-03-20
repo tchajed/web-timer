@@ -28,18 +28,18 @@ body {
   padding-top: 8vw;
   line-height: 40vh;
   white-space: nowrap;
-}
-#counters.running .t {
-  color: @dark;
-}
-#counters,:not(.running) .t {
-  color: @light;
-}
-#counters.min #hr-l {
-  display: none;
-}
-#counters.hr #sec-l {
-  display: none;
+  &.running .t {
+    color: @dark;
+  }
+  &:not(.running) .t {
+    color: @light;
+  }
+  &.min #hr-l {
+    display: none;
+  }
+  &.hr #sec-l {
+    display: none;
+  }
 }
 
 .label {
@@ -61,11 +61,11 @@ body {
     margin: 0 5px;
     color: @light;
     background-color: #eaeaea;
+    &:hover {
+      background-color: #c0c0c0;
+    }
     border-radius: 5px;
     border: 1px solid black;
-  }
-  button:hover {
-    background-color: #c0c0c0;
   }
 }
 
