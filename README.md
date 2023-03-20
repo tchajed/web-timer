@@ -8,10 +8,11 @@ Web-based timer for tracking time on a task.
 
 ## Developing
 
+We use [Parcel](https://parceljs.org/) to build and develop.
+
 ```sh
 npm install
-gulp
+npm run build
 ```
 
-Run `gulp serve` to watch for changes and run a development server (using
-BrowserSync for live reloading).
+Run `npm run start` to run the parcel development server. This is an alias for `npx parcel`.
