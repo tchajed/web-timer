@@ -57,7 +57,7 @@ document.onkeyup = e => {
   if (e.target == dom.task) {
     return;
   }
-  const shortcuts = new Map<string, () => any>([
+  const shortcuts = new Map<string, () => void>([
     [" ", startStop],
     ["r", reset],
     ["p", timer.pause],

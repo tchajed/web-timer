@@ -90,7 +90,6 @@ function pause() {
 function reset() {
   timer.reset();
   updateDom();
-  updateTime();
 }
 
 updateDom();
