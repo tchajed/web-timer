@@ -40,6 +40,29 @@ dom.start_stop_btn.addEventListener("click", _e => {
   startStop();
 });
 
-dom.reset_btn.addEventListener("click", _e => {
+
+function reset() {
   timer.reset();
+}
+
+dom.reset_btn.addEventListener("click", _e => {
+  reset();
 });
+
+// Keyboard shortcuts
+
+document.onkeyup = e => {
+  // skip events destined for editable task field
+  if (e.target == dom.task) {
+    return;
+  }
+  const shortcuts = new Map<string, () => any>([
+    [" ", startStop],
+    ["r", reset],
+    ["p", timer.pause],
+  ]);
+  const cb = shortcuts.get(e.key);
+  if (cb) {
+    cb();
+  }
+};

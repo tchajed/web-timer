@@ -5,6 +5,10 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "target": "es5",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "es2019"
+    ]
   }
 }

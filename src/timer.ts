@@ -55,7 +55,8 @@ export class Timer {
   }
 
   pauseNow(now: Date) {
-    if (this.state != State.Running) {
+    // if not even started we don't move into paused state
+    if (this.state == State.Paused || this.state == State.NotStarted) {
       return;
     }
     this.priorSecondsElapsed += this.lastRunSeconds(now);
