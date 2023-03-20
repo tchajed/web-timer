@@ -1,13 +1,7 @@
-import { Timer, State } from "./timer";
+import { State, Timer } from "./timer";
+import { getElementById, padStart } from "./utils";
 
 const timer = new Timer();
-function getElementById(id: string): HTMLElement {
-  const el = document.getElementById(id);
-  if (el == null) {
-    throw new Error(`dom element ${id} not found`);
-  }
-  return el;
-}
 const dom = {
   counters: getElementById("counters"),
   hr: getElementById("hr"),
@@ -16,15 +10,6 @@ const dom = {
   start_stop_btn: getElementById("start_stop"),
   reset_btn: getElementById("reset"),
 }
-
-// pad s to be at least minLength, by adding copies of padString to the start
-function padStart(s: string, minLength: number, padString: string): string {
-  var padding = "";
-  while (padding.length + s.length < minLength) {
-    padding = padding + padString;
-  }
-  return padding + s;
-};
 
 function updateTime() {
   const totalSec = timer.secondsElapsed();
@@ -46,7 +31,7 @@ function updateTime() {
 
 class Updater {
   cb: () => any;
-  intervalId: ReturnType<typeof setInterval>;
+  intervalId: ReturnType<typeof setInterval> | null;
 
   constructor(cb: () => any) {
     this.cb = cb;
@@ -54,8 +39,10 @@ class Updater {
   }
 
   stop() {
-    clearInterval(this.intervalId);
-    this.intervalId = null;
+    if (this.intervalId != null) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
   }
 
   start() {

@@ -4,6 +4,7 @@
   ],
   "compilerOptions": {
     "noImplicitAny": true,
+    "strict": true,
     "target": "es5",
     "esModuleInterop": true,
     "lib": [

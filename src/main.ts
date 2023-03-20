@@ -1,10 +1,11 @@
 import { State } from "./timer";
 import timer from "./timer_controller";
+import { getElementById } from "./utils";
 
 const dom = {
-  start_stop_btn: document.getElementById("start_stop"),
-  reset_btn: document.getElementById("reset"),
-  task: document.getElementById("task"),
+  start_stop_btn: getElementById("start_stop"),
+  reset_btn: getElementById("reset"),
+  task: getElementById("task"),
 }
 
 /// Set up task/window hash UI.

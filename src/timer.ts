@@ -13,7 +13,7 @@ export class Timer {
   priorSecondsElapsed: number;
 
   // if state is Running, the time that the timer was last started
-  timeStarted: Date;
+  timeStarted: Date | null;
 
   constructor() {
     this.state = State.NotStarted;
@@ -22,6 +22,11 @@ export class Timer {
   }
 
   lastRunSeconds(now: Date): number {
+    if (this.timeStarted == null) {
+      console.error(`unexpected call to lastRunSeconds with no timeStarted`);
+      console.info(self);
+      return 0;
+    }
     const msElapsedThisRun = now.getTime() - this.timeStarted.getTime();
     return msElapsedThisRun / 1000;
   }
@@ -29,11 +34,10 @@ export class Timer {
   secondsElapsedNow(now: Date): number {
     if (this.state == State.NotStarted) {
       return 0;
-    }
-    if (this.state == State.Paused) {
+    } else if (this.state == State.Paused) {
       return this.priorSecondsElapsed;
-    }
-    if (this.state == State.Running) {
+    } else {
+      // this.state == State.Running
       return Math.round(this.priorSecondsElapsed + this.lastRunSeconds(now));
     }
   }
