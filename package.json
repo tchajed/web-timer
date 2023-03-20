@@ -1,6 +1,7 @@
 {
   "name": "web-timer",
   "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "0.1.0",
   "description": "Full screen timer",
   "scripts": {

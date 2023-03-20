@@ -13,8 +13,8 @@ var intervalId: ReturnType<typeof setInterval> = null;
 // pad s to be at least minLength, by adding copies of padString to the start
 function padStart(s: string, minLength: number, padString: string): string {
   var padding = "";
-  while (padding.length - s.length < minLength) {
-    padding += padString;
+  while (padding.length + s.length < minLength) {
+    padding = padding + padString;
   }
   return padding + s;
 };
