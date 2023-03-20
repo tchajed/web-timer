@@ -1,4 +1,3 @@
-import { State } from "./timer";
 import timer from "./timer_controller";
 import { getElementById } from "./utils";
 
@@ -38,10 +37,10 @@ dom.task.addEventListener("focusout", _e => {
 /// Set up timer UI.
 
 function startStop() {
-  if (timer.state() == State.NotStarted || timer.state() == State.Paused) {
-    timer.start();
-  } else {
+  if (timer.isRunning()) {
     timer.pause();
+  } else {
+    timer.start();
   }
 }
 

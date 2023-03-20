@@ -99,8 +99,8 @@ const controller = {
   start,
   pause,
   reset,
-  state: () => {
-    return timer.state;
+  isRunning: (): boolean => {
+    return timer.state == State.Running;
   },
 }
 export default controller;
