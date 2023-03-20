@@ -26,13 +26,12 @@ h1 {
   white-space: nowrap;
   position: absolute;
   bottom: 40%;
-}
-
-.active {
-  color: black;
-}
-.inactive {
-  color: @deemph;
+  span,:not(.active) {
+    color: @deemph;
+  }
+  span.active {
+    color: black;
+  }
 }
 
 .label {
