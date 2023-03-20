@@ -10,18 +10,26 @@ const dom = {
 
 /// Set up task/window hash UI.
 
-function hashToTask(_hash: string) {
-  var text = decodeURI(window.location.hash);
+function hashToTask(hash: string): string {
+  if (!hash) {
+    return "";
+  }
+  var text = decodeURI(hash);
   if (text[0] == "#") {
     text = text.substring(1, text.length);
   }
   return text;
 }
 
-if (window.location.hash) {
-  var text = hashToTask(window.location.hash);
-  dom.task.innerText = text;
+function loadWindowHash() {
+  dom.task.innerText = hashToTask(window.location.hash);
 }
+
+// on initial document load
+loadWindowHash();
+
+// when hash is changed by user
+window.addEventListener("hashchange", loadWindowHash);
 
 dom.task.addEventListener("focusout", _e => {
   window.location.hash = dom.task.innerText;
