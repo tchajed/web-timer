@@ -5,7 +5,7 @@
   "description": "Full screen timer",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url '.'"
   },
   "keywords": [
     "timer"
