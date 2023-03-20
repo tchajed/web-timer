@@ -10,12 +10,21 @@ const dom = {
 
 var intervalId: ReturnType<typeof setInterval> = null;
 
+// pad s to be at least minLength, by adding copies of padString to the start
+function padStart(s: string, minLength: number, padString: string): string {
+  var padding = "";
+  while (padding.length - s.length < minLength) {
+    padding += padString;
+  }
+  return padding + s;
+};
+
 function updateTime() {
   const totalSec = timer.secondsElapsed();
   const min = Math.round(totalSec / 60);
   const sec = Math.round(totalSec % 60);
   dom.min.innerText = `${min}`;
-  dom.sec.innerText = `${sec}`.padStart(2, "0");
+  dom.sec.innerText = padStart(`${sec}`, 2, "0");
 }
 
 function stopUpdateInterval() {

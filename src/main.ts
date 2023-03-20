@@ -9,7 +9,7 @@ const dom = {
 
 /// Set up task/window hash UI.
 
-function hashToTask(hash: string) {
+function hashToTask(_hash: string) {
   var text = decodeURI(window.location.hash);
   if (text[0] == "#") {
     text = text.substring(1, text.length);
@@ -22,7 +22,7 @@ if (window.location.hash) {
   dom.task.innerText = text;
 }
 
-dom.task.addEventListener("focusout", e => {
+dom.task.addEventListener("focusout", _e => {
   window.location.hash = dom.task.innerText;
 });
 
@@ -36,10 +36,10 @@ function startStop() {
   }
 }
 
-dom.start_stop_btn.addEventListener("click", e => {
+dom.start_stop_btn.addEventListener("click", _e => {
   startStop();
 });
 
-dom.reset_btn.addEventListener("click", e => {
+dom.reset_btn.addEventListener("click", _e => {
   timer.reset();
 });
