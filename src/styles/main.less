@@ -1,21 +1,22 @@
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 2em auto;
-  max-width: 800px;
   padding: 1em;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @dark: black;
 @light: #888;
 
-h1 {
+#task {
   position: absolute;
-  font-weight: 600;
+  margin: 1em auto;
   top: 0;
   left: 0;
   width: 100%;
   font-size: 3.5vw;
-  line-height: 2;
+  font-weight: 600;
+  line-height: 2.5;
   text-align: center;
   // make sure this is clickable on top of timer
   z-index: 1;
@@ -25,8 +26,6 @@ h1 {
   font-size: 18vw;
   line-height: 60vh;
   white-space: nowrap;
-  position: absolute;
-  bottom: 40%;
 }
 #counters.running .t {
   color: @dark;
