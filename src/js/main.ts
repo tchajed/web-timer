@@ -52,9 +52,15 @@ dom.reset_btn.addEventListener("click", _e => {
 
 // Keyboard shortcuts
 
-document.onkeyup = e => {
-  // skip events destined for editable task field
+document.onkeydown = e => {
+  // editable task field
   if (e.target == dom.task) {
+    if (e.key == "Enter") {
+      dom.task.blur();
+      // stop event from propagating (that is, from adding a newline to text
+      // field)
+      return false;
+    }
     return;
   }
   const shortcuts = new Map<string, () => void>([
