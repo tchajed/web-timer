@@ -35,7 +35,7 @@ export class Timer {
     if (this.state == State.NotStarted) {
       return 0;
     } else if (this.state == State.Paused) {
-      return this.priorSecondsElapsed;
+      return Math.round(this.priorSecondsElapsed);
     } else {
       // this.state == State.Running
       return Math.round(this.priorSecondsElapsed + this.lastRunSeconds(now));

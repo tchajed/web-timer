@@ -11,11 +11,16 @@ const dom = {
   reset_btn: getElementById("reset"),
 }
 
+var lastUpdate: number = 0;
 function updateTime() {
   const totalSec = timer.secondsElapsed();
+  if (lastUpdate == totalSec) {
+    return;
+  }
+  lastUpdate = totalSec;
   const hr = Math.round(totalSec / 3600);
   const min = Math.round((totalSec % 3600) / 60);
-  const sec = Math.round(totalSec % 60);
+  const sec = totalSec % 60;
   if (hr > 0) {
     dom.counters.classList.add("hr");
     dom.counters.classList.remove("min");
