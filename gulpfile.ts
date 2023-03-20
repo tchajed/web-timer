@@ -9,14 +9,16 @@ import watchify from "watchify";
 import browserSyncPkg from "browser-sync";
 const browserSync = browserSyncPkg.create();
 
+const browserifyConfig: browserify.Options = {
+  basedir: ".",
+  debug: true,
+  entries: ["src/main.ts"],
+  cache: {},
+  packageCache: {},
+};
+
 const watchedBrowserify = watchify(
-  browserify({
-    basedir: ".",
-    debug: true,
-    entries: ["src/main.ts"],
-    cache: {},
-    packageCache: {},
-  })
+  browserify(browserifyConfig)
     .plugin(tsify)
 );
 
@@ -37,7 +39,7 @@ export function styles() {
     .pipe(browserSync.stream());
 }
 
-function bundle() {
+function watchedBundle() {
   return watchedBrowserify
     .bundle()
     .on("error", fancy_log)
@@ -45,13 +47,27 @@ function bundle() {
     .pipe(gulp.dest("dist"));
 }
 
-exports.default = gulp.series(gulp.parallel(copyHtml, styles), bundle);
-watchedBrowserify.on("update", bundle);
-watchedBrowserify.on("log", fancy_log);
+function bundle() {
+  return browserify(browserifyConfig)
+    .plugin(tsify)
+    .bundle()
+    .on("error", fancy_log)
+    .pipe(source("bundle.js"))
+    .pipe(gulp.dest("dist"));
+}
+
+export function build() {
+  gulp.series(gulp.parallel(copyHtml, styles), bundle)
+}
+
+exports.default = build;
 
 export function watch() {
   gulp.watch(["src/*.html"], {}, copyHtml);
   gulp.watch(["styles/*.less"], {}, styles);
+  gulp.series(gulp.parallel(copyHtml, styles), watchedBundle);
+  watchedBrowserify.on("update", watchedBundle);
+  watchedBrowserify.on("log", fancy_log);
 }
 
 export function serve() {
