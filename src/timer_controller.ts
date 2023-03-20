@@ -2,6 +2,7 @@ import { Timer, State } from "./timer";
 
 const timer = new Timer();
 const dom = {
+  counters: document.getElementById("counters"),
   min: document.getElementById("min"),
   sec: document.getElementById("sec"),
   start_stop_btn: document.getElementById("start_stop"),
@@ -36,23 +37,20 @@ function stopUpdateInterval() {
 
 function updateDom() {
   if (timer.state == State.Running) {
-    dom.min.classList.add("active");
-    dom.sec.classList.add("active");
+    dom.counters.classList.add("running");
     if (intervalId == null) {
       intervalId = setInterval(updateTime, 200);
     }
     dom.start_stop_btn.innerText = "pause";
   } else if (timer.state == State.NotStarted) {
     stopUpdateInterval();
-    dom.min.classList.remove("active");
-    dom.sec.classList.remove("active");
+    dom.counters.classList.remove("running");
     dom.start_stop_btn.innerText = "start";
   } else {
     // timer.state == State.Paused
     stopUpdateInterval();
     updateTime();
-    dom.min.classList.remove("active");
-    dom.sec.classList.remove("active");
+    dom.counters.classList.remove("running");
     dom.start_stop_btn.innerText = "resume";
   }
 }

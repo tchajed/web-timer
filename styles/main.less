@@ -5,7 +5,8 @@ body {
   padding: 1em;
 }
 
-@deemph: #888;
+@dark: black;
+@light: #888;
 
 h1 {
   position: absolute;
@@ -26,16 +27,16 @@ h1 {
   white-space: nowrap;
   position: absolute;
   bottom: 40%;
-  span,:not(.active) {
-    color: @deemph;
-  }
-  span.active {
-    color: black;
-  }
+}
+#counters.running .t {
+  color: @dark;
+}
+#counters,:not(.running) .t {
+  color: @light;
 }
 
 .label {
-  color: @deemph;
+  color: @light;
   margin: 0 1vw;
 }
 
@@ -50,6 +51,6 @@ h1 {
     font-size: 3.5vw;
     padding: 2px 15px;
     margin: 0 10px;
-    color: @deemph;
+    color: @light;
   }
 }
