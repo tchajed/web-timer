@@ -4,7 +4,7 @@
 
 Web-based timer for tracking time on a task.
 
-![screenshot of timer showing 1m 47s](img/screenshot.png)
+[![screenshot of timer showing 1m 47s](img/screenshot.png)](https://tchajed.github.io/web-timer/)
 
 ## Developing
 
