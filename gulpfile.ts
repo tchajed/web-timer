@@ -56,11 +56,8 @@ function bundle() {
     .pipe(gulp.dest("dist"));
 }
 
-export function build() {
-  gulp.series(gulp.parallel(copyHtml, styles), bundle)
-}
-
-exports.default = build;
+export const build = gulp.series(gulp.parallel(copyHtml, styles), bundle);
+export default build;
 
 export function watch() {
   gulp.watch(["src/*.html"], {}, copyHtml);
