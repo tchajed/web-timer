@@ -57,6 +57,18 @@ dom.reset_btn.addEventListener("click", _e => {
   reset();
 });
 
+function startEditing() {
+  dom.task.focus();
+  const sel = window.getSelection();
+  if (!sel) {
+    return;
+  }
+  // reset selection to front
+  sel.collapseToStart();
+  // select entire task input
+  sel.modify("extend", "right", "line");
+}
+
 // Keyboard shortcuts
 
 document.onkeydown = e => {
@@ -74,9 +86,11 @@ document.onkeydown = e => {
     [" ", startStop],
     ["r", reset],
     ["p", timer.pause],
+    ["e", startEditing],
   ]);
   const cb = shortcuts.get(e.key);
   if (cb) {
     cb();
+    return false;
   }
 };
