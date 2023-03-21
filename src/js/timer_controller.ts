@@ -18,8 +18,8 @@ function updateTime() {
     return;
   }
   lastUpdate = totalSec;
-  const hr = Math.round(totalSec / 3600);
-  const min = Math.round((totalSec % 3600) / 60);
+  const hr = Math.floor(totalSec / 3600);
+  const min = Math.floor((totalSec % 3600) / 60);
   const sec = totalSec % 60;
   if (hr > 0) {
     dom.counters.classList.add("hr");
