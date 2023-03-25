@@ -88,6 +88,11 @@ document.onkeydown = e => {
     ["p", timer.pause],
     ["e", startEditing],
   ]);
+  // pass through keys with modifiers (needed so cmd-r to reload works, for
+  // example)
+  if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) {
+    return true;
+  }
   const cb = shortcuts.get(e.key);
   if (cb) {
     cb();
