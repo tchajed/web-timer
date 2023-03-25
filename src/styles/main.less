@@ -1,8 +1,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   padding: 1em;
-  max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 @dark: black;
@@ -10,23 +10,21 @@ body {
 
 #task {
   position: absolute;
-  margin: 1em auto;
+  margin: 2vh auto;
   top: 0;
   left: 0;
   width: 100%;
   font-size: 3.5vw;
+  // make selection border bigger than text
+  line-height: 2;
   font-weight: 600;
-  line-height: 2.5;
-  text-align: center;
   // make sure this is clickable on top of timer
   z-index: 1;
 }
 
 #counters {
-  font-size: 18vw;
-  // give the task header some room
-  padding-top: 8vw;
-  line-height: 40vh;
+  font-size: 20vw;
+  padding-top: 6vh;
   white-space: nowrap;
   &.running .t {
     color: @dark;
@@ -50,7 +48,6 @@ body {
 }
 
 #buttons {
-  text-align: center;
   padding-top: 1vw;
 
   button {
