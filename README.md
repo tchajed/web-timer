@@ -4,6 +4,12 @@
 
 Web-based timer for tracking time on a task.
 
+Keyboard shortcuts:
+- space to pause/resume
+- r to reset
+- p to pause
+- e to edit task description
+
 [![screenshot of timer showing 0m 32s](img/screenshot.png)](https://tchajed.github.io/web-timer/)
 
 ## Developing
