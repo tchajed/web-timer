@@ -14,12 +14,11 @@ Keyboard shortcuts:
 
 ## Developing
 
-We use [Parcel](https://parceljs.org/) to build and develop.
+We use [Parcel](https://parceljs.org/) to build and develop, and pnpm as a package manager.
 
 ```sh
-npm install
-npm run build
+pnpm install
+pnpm run build
 ```
 
-Run `npm run start` to run the parcel development server. This is an alias for
-`npx parcel serve`.
+Run `pnpm run start` to run the parcel development server.
