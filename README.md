@@ -16,8 +16,9 @@ Keyboard shortcuts:
 
 We use [Parcel](https://parceljs.org/) to build and develop, and pnpm as a package manager.
 
-`nvm use` is required since Parcel doesn't work on node.js > 22.6 (you'll get a
-SIGSEGV error).
+`nvm use` will give you a known-to-work version of node.js. Node 22.6 has a bug
+that makes it not work with parcel (you'll get a SIGSEGV); it was fixed in
+22.10 and 23.
 
 ```sh
 nvm use
