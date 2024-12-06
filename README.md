@@ -15,7 +15,7 @@ Keyboard shortcuts:
 
 ## Developing
 
-We use [Parcel](https://parceljs.org/) to build and develop, and pnpm as a package manager.
+We use [Parcel](https://parceljs.org/) to build and develop, pnpm as a package manager, and prettier for formatting.
 
 ```sh
 pnpm install
@@ -23,6 +23,8 @@ pnpm run build
 ```
 
 Run `pnpm run dev` to run the parcel development server.
+
+Run `pnpm fmt` to format the code.
 
 ## Tech stack
 

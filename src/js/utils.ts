@@ -7,10 +7,14 @@ export function getElementById(id: string): HTMLElement {
 }
 
 // pad s to be at least minLength, by adding copies of padString to the start
-export function padStart(s: string, minLength: number, padString: string): string {
+export function padStart(
+  s: string,
+  minLength: number,
+  padString: string,
+): string {
   var padding = "";
   while (padding.length + s.length < minLength) {
     padding = padding + padString;
   }
   return padding + s;
-};
+}

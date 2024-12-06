@@ -5,7 +5,7 @@ const dom = {
   start_stop_btn: getElementById("start_stop"),
   reset_btn: getElementById("reset"),
   task: getElementById("task"),
-}
+};
 
 /// Set up task/window hash UI.
 
@@ -30,7 +30,7 @@ loadWindowHash();
 // when hash is changed by user
 window.addEventListener("hashchange", loadWindowHash);
 
-dom.task.addEventListener("focusout", _e => {
+dom.task.addEventListener("focusout", (_e) => {
   window.location.hash = dom.task.innerText;
 });
 
@@ -44,16 +44,15 @@ function startStop() {
   }
 }
 
-dom.start_stop_btn.addEventListener("click", _e => {
+dom.start_stop_btn.addEventListener("click", (_e) => {
   startStop();
 });
-
 
 function reset() {
   timer.reset();
 }
 
-dom.reset_btn.addEventListener("click", _e => {
+dom.reset_btn.addEventListener("click", (_e) => {
   reset();
 });
 
@@ -71,7 +70,7 @@ function startEditing() {
 
 // Keyboard shortcuts
 
-document.onkeydown = e => {
+document.onkeydown = (e) => {
   // editable task field
   if (e.target == dom.task) {
     if (e.key == "Enter") {
