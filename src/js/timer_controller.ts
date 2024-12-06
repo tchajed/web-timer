@@ -9,15 +9,17 @@ const dom = {
   sec: getElementById("sec"),
   start_stop_btn: getElementById("start_stop"),
   reset_btn: getElementById("reset"),
-}
+};
 
-var lastUpdate: number = 0;
+var lastTotalSec: number = 0;
+// Update the DOM based on the elapsed seconds.
 function updateTime() {
   const totalSec = timer.secondsElapsed();
-  if (lastUpdate == totalSec) {
+  if (lastTotalSec == totalSec) {
+    // dom contents are already correct
     return;
   }
-  lastUpdate = totalSec;
+  lastTotalSec = totalSec;
   const hr = Math.floor(totalSec / 3600);
   const min = Math.floor((totalSec % 3600) / 60);
   const sec = totalSec % 60;
@@ -59,6 +61,7 @@ class Updater {
 
 const updater = new Updater(updateTime);
 
+// update the DOM to reflect timer.state
 function updateDom() {
   if (timer.state == State.Running) {
     dom.counters.classList.add("running");
@@ -102,5 +105,5 @@ const controller = {
   isRunning: (): boolean => {
     return timer.state == State.Running;
   },
-}
+};
 export default controller;

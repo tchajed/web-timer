@@ -5,6 +5,7 @@
 Web-based timer for tracking time on a task.
 
 Keyboard shortcuts:
+
 - space to pause/resume
 - r to reset
 - p to pause
@@ -16,14 +17,17 @@ Keyboard shortcuts:
 
 We use [Parcel](https://parceljs.org/) to build and develop, and pnpm as a package manager.
 
-`nvm use` will give you a known-to-work version of node.js. Node 22.6 has a bug
-that makes it not work with parcel (you'll get a SIGSEGV); it was fixed in
-22.10 and 23.
-
 ```sh
-nvm use
 pnpm install
 pnpm run build
 ```
 
-Run `pnpm run start` to run the parcel development server.
+Run `pnpm run dev` to run the parcel development server.
+
+## Tech stack
+
+It's just JavaScript, HTML, and CSS. (Except that we actually use TypeScript and Less.) There are no dependencies.
+
+## Acknowledgment
+
+The first version of this timer (including its design) was written by Jon Gjengset.

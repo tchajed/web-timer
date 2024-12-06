@@ -21,7 +21,11 @@ export class Timer {
     this.timeStarted = null;
   }
 
-  lastRunSeconds(now: Date): number {
+  // the *Now methods take the current time so they can be tested (although
+  // there are currently no tests)
+
+  // seconds from just the ongoing run of the timer
+  #lastRunSeconds(now: Date): number {
     if (this.timeStarted == null) {
       console.error(`unexpected call to lastRunSeconds with no timeStarted`);
       console.info(self);
@@ -31,6 +35,7 @@ export class Timer {
     return msElapsedThisRun / 1000;
   }
 
+  // seconds the timer has tracked with the current time being now
   secondsElapsedNow(now: Date): number {
     if (this.state == State.NotStarted) {
       return 0;
@@ -38,7 +43,7 @@ export class Timer {
       return Math.round(this.priorSecondsElapsed);
     } else {
       // this.state == State.Running
-      return Math.round(this.priorSecondsElapsed + this.lastRunSeconds(now));
+      return Math.round(this.priorSecondsElapsed + this.#lastRunSeconds(now));
     }
   }
 
@@ -54,24 +59,28 @@ export class Timer {
     this.timeStarted = now;
   }
 
+  // start the timer
   start() {
     this.startNow(new Date());
   }
 
+  // pause the timer's current run at the current time `now`
   pauseNow(now: Date) {
     // if not even started we don't move into paused state
     if (this.state == State.Paused || this.state == State.NotStarted) {
       return;
     }
-    this.priorSecondsElapsed += this.lastRunSeconds(now);
+    this.priorSecondsElapsed += this.#lastRunSeconds(now);
     this.state = State.Paused;
     this.timeStarted = null;
   }
 
+  // pause the timer
   pause() {
     this.pauseNow(new Date());
   }
 
+  // reset the timer completely
   reset() {
     this.state = State.NotStarted;
     this.priorSecondsElapsed = 0;
