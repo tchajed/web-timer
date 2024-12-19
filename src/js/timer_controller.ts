@@ -9,17 +9,13 @@ const dom = {
   sec: getElementById("sec"),
   start_stop_btn: getElementById("start_stop"),
   reset_btn: getElementById("reset"),
+  task: getElementById("task"),
 };
 
-var lastTotalSec: number = 0;
-// Update the DOM based on the elapsed seconds.
-function updateTime() {
-  const totalSec = timer.secondsElapsed();
-  if (lastTotalSec == totalSec) {
-    // dom contents are already correct
-    return;
-  }
-  lastTotalSec = totalSec;
+type DomState = { totalSec: number; task: string };
+
+function updateDomTo(state: DomState) {
+  const { totalSec, task } = state;
   const hr = Math.floor(totalSec / 3600);
   const min = Math.floor((totalSec % 3600) / 60);
   const sec = totalSec % 60;
@@ -34,6 +30,34 @@ function updateTime() {
     dom.min.textContent = `${min}`;
     dom.sec.textContent = padStart(`${sec}`, 2, "0");
   }
+  // set title text to include task and elapsed time
+  var title = "Timer";
+  const sep = "·";
+  if (task != "") {
+    title = `${task} ${sep} ${title}`;
+  }
+  if (totalSec > 0 || timer.state == State.Running) {
+    title = `${timer.elapsedText()} ${sep} ${title}`;
+  }
+  document.title = title;
+}
+
+var lastState: DomState = { totalSec: 0, task: "" };
+// Update the DOM based on the elapsed seconds.
+function updateTime() {
+  const currentState: DomState = {
+    totalSec: timer.secondsElapsed(),
+    task: dom.task.innerText.trim(),
+  };
+  if (
+    lastState.totalSec == currentState.totalSec &&
+    lastState.task == currentState.task
+  ) {
+    // dom contents are already correct
+    return;
+  }
+  lastState = currentState;
+  updateDomTo(currentState);
 }
 
 class Updater {
@@ -104,6 +128,9 @@ const controller = {
   reset,
   isRunning: (): boolean => {
     return timer.state == State.Running;
+  },
+  update: () => {
+    updateDom();
   },
 };
 export default controller;

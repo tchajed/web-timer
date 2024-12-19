@@ -32,6 +32,7 @@ window.addEventListener("hashchange", loadWindowHash);
 
 dom.task.addEventListener("focusout", (_e) => {
   window.location.hash = dom.task.innerText;
+  timer.update();
 });
 
 /// Set up timer UI.

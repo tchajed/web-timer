@@ -86,4 +86,19 @@ export class Timer {
     this.priorSecondsElapsed = 0;
     this.timeStarted = null;
   }
+
+  // time elapsed as short human-readable string
+  elapsedText(): string {
+    const totalSec = this.secondsElapsed();
+    const hr = Math.floor(totalSec / 3600);
+    const min = Math.floor((totalSec % 3600) / 60);
+    const sec = totalSec % 60;
+    if (hr > 0) {
+      const minTwoDigit = min.toString().padStart(2, "0");
+      return `${hr}:${minTwoDigit}`;
+    } else {
+      const secTwoDigit = sec.toString().padStart(2, "0");
+      return `${min}:${secTwoDigit}`;
+    }
+  }
 }
