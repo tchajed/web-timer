@@ -15,7 +15,7 @@
   "author": "Tej Chajed",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/transformer-less": "^2.13.2",
+    "@parcel/transformer-less": "^2.13.3",
     "parcel": "^2.13.2",
     "prettier": "^3.4.2"
   },
