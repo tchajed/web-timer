@@ -10,8 +10,9 @@
     "fmt": "prettier --write . --log-level error"
   },
   "pwaManifest": {
-    "name": "Full screen timer",
+    "name": "Timer",
     "shortName": "Timer",
+    "description": "Full screen timer",
     "startURL": "./?pwa=true",
     "theme": "#ffffff",
     "generateIconOptions": {
