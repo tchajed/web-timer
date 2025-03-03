@@ -29,8 +29,8 @@ importers:
         specifier: ^0.1.6
         version: 0.1.6(parcel@2.13.3(@swc/helpers@0.5.15))
       prettier:
-        specifier: ^3.5.1
-        version: 3.5.1
+        specifier: ^3.5.3
+        version: 3.5.3
 
 packages:
   "@babel/code-frame@7.26.2":
@@ -712,100 +712,100 @@ packages:
       }
     engines: { node: ">=10" }
 
-  "@swc/core-darwin-arm64@1.10.16":
+  "@swc/core-darwin-arm64@1.11.5":
     resolution:
       {
-        integrity: sha512-iikIxwqCQ4Bvz79vJ4ELh26efPf1u5D9TFdmXSJUBs7C3mmMHvk5zyWD9A9cTowXiW6WHs2gE58U1R9HOTTIcg==,
+        integrity: sha512-GEd1hzEx0mSGkJYMFMGLnrGgjL2rOsOsuYWyjyiA3WLmhD7o+n/EWBDo6mzD/9aeF8dzSPC0TnW216gJbvrNzA==,
       }
     engines: { node: ">=10" }
     cpu: [arm64]
     os: [darwin]
 
-  "@swc/core-darwin-x64@1.10.16":
+  "@swc/core-darwin-x64@1.11.5":
     resolution:
       {
-        integrity: sha512-R2Eb9aktWd62vPfW9H/c/OaQ0e94iURibBo4uzUUcgxNNmB4+wb6piKbHxGdr/5bEsT+vJ1lwZFSRzfb45E7DA==,
+        integrity: sha512-toz04z9wAClVvQSEY3xzrgyyeWBAfMWcKG4K0ugNvO56h/wczi2ZHRlnAXZW1tghKBk3z6MXqa/srfXgNhffKw==,
       }
     engines: { node: ">=10" }
     cpu: [x64]
     os: [darwin]
 
-  "@swc/core-linux-arm-gnueabihf@1.10.16":
+  "@swc/core-linux-arm-gnueabihf@1.11.5":
     resolution:
       {
-        integrity: sha512-mkqN3HBAMnuiSGZ/k2utScuH8rAPshvNj0T1LjBWon+X9DkMNHSA+aMLdWsy0yZKF1zjOPc4L3Uq2l2wzhUlzA==,
+        integrity: sha512-5SjmKxXdwbBpsYGTpgeXOXMIjS563/ntRGn8Zc12H/c4VfPrRLGhgbJ/48z2XVFyBLcw7BCHZyFuVX1+ZI3W0Q==,
       }
     engines: { node: ">=10" }
     cpu: [arm]
     os: [linux]
 
-  "@swc/core-linux-arm64-gnu@1.10.16":
+  "@swc/core-linux-arm64-gnu@1.11.5":
     resolution:
       {
-        integrity: sha512-PH/+q/L5nVZJ91CU07CL6Q9Whs6iR6nneMZMAgtVF9Ix8ST0cWVItdUhs6D38kFklCFhaOrpHhS01HlMJ72vWw==,
+        integrity: sha512-pydIlInHRzRIwB0NHblz3Dx58H/bsi0I5F2deLf9iOmwPNuOGcEEZF1Qatc7YIjP5DFbXK+Dcz+pMUZb2cc2MQ==,
       }
     engines: { node: ">=10" }
     cpu: [arm64]
     os: [linux]
 
-  "@swc/core-linux-arm64-musl@1.10.16":
+  "@swc/core-linux-arm64-musl@1.11.5":
     resolution:
       {
-        integrity: sha512-1169+C9XbydKKc6Ec1XZxTGKtHjZHDIFn0r+Nqp/QSVwkORrOY1Vz2Hdu7tn/lWMg36ZkGePS+LnnyV67s/7yg==,
+        integrity: sha512-LhBHKjkZq5tJF1Lh0NJFpx7ROnCWLckrlIAIdSt9XfOV+zuEXJQOj+NFcM1eNk17GFfFyUMOZyGZxzYq5dveEQ==,
       }
     engines: { node: ">=10" }
     cpu: [arm64]
     os: [linux]
 
-  "@swc/core-linux-x64-gnu@1.10.16":
+  "@swc/core-linux-x64-gnu@1.11.5":
     resolution:
       {
-        integrity: sha512-n2rV0XwkjoHn4MDJmpYp5RBrnyi94/6GsJVpbn6f+/eqSrZn3mh3dT7pdZc9zCN1Qp9eDHo+uI6e/wgvbL22uA==,
+        integrity: sha512-dCi4xkxXlsk5sQYb3i413Cfh7+wMJeBYTvBZTD5xh+/DgRtIcIJLYJ2tNjWC4/C2i5fj+Ze9bKNSdd8weRWZ3A==,
       }
     engines: { node: ">=10" }
     cpu: [x64]
     os: [linux]
 
-  "@swc/core-linux-x64-musl@1.10.16":
+  "@swc/core-linux-x64-musl@1.11.5":
     resolution:
       {
-        integrity: sha512-EevCpwreBrkPrJjQVIbiM81lK42ukNNSlBmrSRxxbx2V9VGmOd5qxX0cJBn0TRRSLIPi62BuMS76F9iYjqsjgg==,
+        integrity: sha512-K0AC4TreM5Oo/tXNXnE/Gf5+5y/HwUdd7xvUjOpZddcX/RlsbYOKWLgOtA3fdFIuta7XC+vrGKmIhm5l70DSVQ==,
       }
     engines: { node: ">=10" }
     cpu: [x64]
     os: [linux]
 
-  "@swc/core-win32-arm64-msvc@1.10.16":
+  "@swc/core-win32-arm64-msvc@1.11.5":
     resolution:
       {
-        integrity: sha512-BvE7RWAnKJeELVQWLok6env5I4GUVBTZSvaSN/VPgxnTjF+4PsTeQptYx0xCYhp5QCv68wWYsBnZKuPDS+SBsw==,
+        integrity: sha512-wzum8sYUsvPY7kgUfuqVYTgIPYmBC8KPksoNM1fz5UfhudU0ciQuYvUBD47GIGOevaoxhLkjPH4CB95vh1mJ9w==,
       }
     engines: { node: ">=10" }
     cpu: [arm64]
     os: [win32]
 
-  "@swc/core-win32-ia32-msvc@1.10.16":
+  "@swc/core-win32-ia32-msvc@1.11.5":
     resolution:
       {
-        integrity: sha512-7Jf/7AeCgbLR/JsQgMJuacHIq4Jeie3knf6+mXxn8aCvRypsOTIEu0eh7j24SolOboxK1ijqJ86GyN1VA2Rebg==,
+        integrity: sha512-lco7mw0TPRTpVPR6NwggJpjdUkAboGRkLrDHjIsUaR+Y5+0m5FMMkHOMxWXAbrBS5c4ph7QErp4Lma4r9Mn5og==,
       }
     engines: { node: ">=10" }
     cpu: [ia32]
     os: [win32]
 
-  "@swc/core-win32-x64-msvc@1.10.16":
+  "@swc/core-win32-x64-msvc@1.11.5":
     resolution:
       {
-        integrity: sha512-p0blVm0R8bjaTtmW+FoPmLxLSQdRNbqhuWcR/8g80OzMSkka9mk5/J3kn/5JRVWh+MaR9LHRHZc1Q1L8zan13g==,
+        integrity: sha512-E+DApLSC6JRK8VkDa4bNsBdD7Qoomx1HvKVZpOXl9v94hUZI5GMExl4vU5isvb+hPWL7rZ0NeI7ITnVLgLJRbA==,
       }
     engines: { node: ">=10" }
     cpu: [x64]
     os: [win32]
 
-  "@swc/core@1.10.16":
+  "@swc/core@1.11.5":
     resolution:
       {
-        integrity: sha512-nOINg/OUcZazCW7B55QV2/UB8QAqz9FYe4+z229+4RYboBTZ102K7ebOEjY5sKn59JgAkhjZTz+5BKmXpDFopw==,
+        integrity: sha512-EVY7zfpehxhTZXOfy508gb3D78ihoGGmvyiTWtlBPjgIaidP1Xw0naHMD78CWiFlZmeDjKXJufGtsEGOnZdmNA==,
       }
     engines: { node: ">=10" }
     peerDependencies:
@@ -826,16 +826,16 @@ packages:
         integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==,
       }
 
-  "@swc/types@0.1.17":
+  "@swc/types@0.1.19":
     resolution:
       {
-        integrity: sha512-V5gRru+aD8YVyCOMAjMpWR1Ui577DD5KSJsHP8RAxopAH22jFz6GZd/qxqjO6MJHQhcsjvjOFXyDhyLQUnMveQ==,
+        integrity: sha512-WkAZaAfj44kh/UFdAQcrMP1I0nwRqpt27u+08LMBYMqmQfwwMofYoMh/48NGkMMRfC4ynpfwRbJuu8ErfNloeA==,
       }
 
-  "@xmldom/xmldom@0.9.7":
+  "@xmldom/xmldom@0.9.8":
     resolution:
       {
-        integrity: sha512-syvR8iIJjpTZ/stv7l89UAViwGFh6lbheeOaqSxkYx9YNmIVvPTRH+CT/fpykFtUx5N+8eSMDRvggF9J8GEPzQ==,
+        integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==,
       }
     engines: { node: ">=14.6" }
 
@@ -871,12 +871,12 @@ packages:
       }
     engines: { bare: ">=1.7.0" }
 
-  bare-os@3.4.0:
+  bare-os@3.5.1:
     resolution:
       {
-        integrity: sha512-9Ous7UlnKbe3fMi7Y+qh0DwAup6A1JkYgPnjvMDNOlmnxNRQvQ/7Nst+OnUQKzk0iAT0m9BisbDVp9gCv8+ETA==,
+        integrity: sha512-LvfVNDcWLw2AnIw5f2mWUgumW3I3N/WYGiWeimhQC1Ybt71n2FjlS9GJKeCnFeg1MKZHxzIFmpFnBXDI+sBeFg==,
       }
-    engines: { bare: ">=1.6.0" }
+    engines: { bare: ">=1.14.0" }
 
   bare-path@3.0.0:
     resolution:
@@ -944,10 +944,10 @@ packages:
       }
     engines: { node: ">=6" }
 
-  caniuse-lite@1.0.30001700:
+  caniuse-lite@1.0.30001701:
     resolution:
       {
-        integrity: sha512-2S6XIXwaE7K7erT8dY+kLQcpa5ms63XlRkMkReXjle+kf6c5g38vyMl+Z5y8dSxOFDhcFe+nxnn261PLxBSQsQ==,
+        integrity: sha512-faRs/AW3jA9nTwmJBSO1PQ6L/EOgsB5HMQQq4iCu5zhPgVVgO/pZRHlmatwijZKetFw8/Pr4q6dEN8sJuq8qTw==,
       }
 
   chalk@4.1.2:
@@ -1115,10 +1115,10 @@ packages:
       }
     engines: { node: ">=12" }
 
-  electron-to-chromium@1.5.101:
+  electron-to-chromium@1.5.109:
     resolution:
       {
-        integrity: sha512-L0ISiQrP/56Acgu4/i/kfPwWSgrzYZUnQrC0+QPFuhqlLP1Ir7qzPPDVS9BcKIyWTRU8+o6CC8dKw38tSWhYIA==,
+        integrity: sha512-AidaH9JETVRr9DIPGfp1kAarm/W6hRJTPuCnkF+2MqhF4KaAgRIcBc8nvjk+YMXZhwfISof/7WG29eS4iGxQLQ==,
       }
 
   end-of-stream@1.4.4:
@@ -1741,10 +1741,10 @@ packages:
     engines: { node: ">=10" }
     hasBin: true
 
-  prettier@3.5.1:
+  prettier@3.5.3:
     resolution:
       {
-        integrity: sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==,
+        integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==,
       }
     engines: { node: ">=14" }
     hasBin: true
@@ -1969,10 +1969,10 @@ packages:
       }
     engines: { node: ">=10" }
 
-  update-browserslist-db@1.1.2:
+  update-browserslist-db@1.1.3:
     resolution:
       {
-        integrity: sha512-PPypAm5qvlD7XMZC3BujecnaOxwhrtoFR+Dqkk5Aa/6DssiH0ibKoketaj9w8LP7Bont1rYeoV5plxD7RTEPRg==,
+        integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==,
       }
     hasBin: true
     peerDependencies:
@@ -2273,7 +2273,7 @@ snapshots:
       "@parcel/plugin": 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       "@parcel/source-map": 2.1.1
       "@parcel/utils": 2.13.3
-      "@swc/core": 1.10.16(@swc/helpers@0.5.15)
+      "@swc/core": 1.11.5(@swc/helpers@0.5.15)
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - "@parcel/core"
@@ -2289,7 +2289,7 @@ snapshots:
       "@parcel/types": 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       "@parcel/utils": 2.13.3
       "@parcel/workers": 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
-      "@swc/core": 1.10.16(@swc/helpers@0.5.15)
+      "@swc/core": 1.11.5(@swc/helpers@0.5.15)
       semver: 7.7.1
     transitivePeerDependencies:
       - "@swc/helpers"
@@ -2361,7 +2361,7 @@ snapshots:
       "@parcel/plugin": 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       "@parcel/types": 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       "@parcel/utils": 2.13.3
-      "@xmldom/xmldom": 0.9.7
+      "@xmldom/xmldom": 0.9.8
     transitivePeerDependencies:
       - "@parcel/core"
 
@@ -2687,51 +2687,51 @@ snapshots:
     transitivePeerDependencies:
       - bare-buffer
 
-  "@swc/core-darwin-arm64@1.10.16":
+  "@swc/core-darwin-arm64@1.11.5":
     optional: true
 
-  "@swc/core-darwin-x64@1.10.16":
+  "@swc/core-darwin-x64@1.11.5":
     optional: true
 
-  "@swc/core-linux-arm-gnueabihf@1.10.16":
+  "@swc/core-linux-arm-gnueabihf@1.11.5":
     optional: true
 
-  "@swc/core-linux-arm64-gnu@1.10.16":
+  "@swc/core-linux-arm64-gnu@1.11.5":
     optional: true
 
-  "@swc/core-linux-arm64-musl@1.10.16":
+  "@swc/core-linux-arm64-musl@1.11.5":
     optional: true
 
-  "@swc/core-linux-x64-gnu@1.10.16":
+  "@swc/core-linux-x64-gnu@1.11.5":
     optional: true
 
-  "@swc/core-linux-x64-musl@1.10.16":
+  "@swc/core-linux-x64-musl@1.11.5":
     optional: true
 
-  "@swc/core-win32-arm64-msvc@1.10.16":
+  "@swc/core-win32-arm64-msvc@1.11.5":
     optional: true
 
-  "@swc/core-win32-ia32-msvc@1.10.16":
+  "@swc/core-win32-ia32-msvc@1.11.5":
     optional: true
 
-  "@swc/core-win32-x64-msvc@1.10.16":
+  "@swc/core-win32-x64-msvc@1.11.5":
     optional: true
 
-  "@swc/core@1.10.16(@swc/helpers@0.5.15)":
+  "@swc/core@1.11.5(@swc/helpers@0.5.15)":
     dependencies:
       "@swc/counter": 0.1.3
-      "@swc/types": 0.1.17
+      "@swc/types": 0.1.19
     optionalDependencies:
-      "@swc/core-darwin-arm64": 1.10.16
-      "@swc/core-darwin-x64": 1.10.16
-      "@swc/core-linux-arm-gnueabihf": 1.10.16
-      "@swc/core-linux-arm64-gnu": 1.10.16
-      "@swc/core-linux-arm64-musl": 1.10.16
-      "@swc/core-linux-x64-gnu": 1.10.16
-      "@swc/core-linux-x64-musl": 1.10.16
-      "@swc/core-win32-arm64-msvc": 1.10.16
-      "@swc/core-win32-ia32-msvc": 1.10.16
-      "@swc/core-win32-x64-msvc": 1.10.16
+      "@swc/core-darwin-arm64": 1.11.5
+      "@swc/core-darwin-x64": 1.11.5
+      "@swc/core-linux-arm-gnueabihf": 1.11.5
+      "@swc/core-linux-arm64-gnu": 1.11.5
+      "@swc/core-linux-arm64-musl": 1.11.5
+      "@swc/core-linux-x64-gnu": 1.11.5
+      "@swc/core-linux-x64-musl": 1.11.5
+      "@swc/core-win32-arm64-msvc": 1.11.5
+      "@swc/core-win32-ia32-msvc": 1.11.5
+      "@swc/core-win32-x64-msvc": 1.11.5
       "@swc/helpers": 0.5.15
 
   "@swc/counter@0.1.3": {}
@@ -2740,11 +2740,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  "@swc/types@0.1.17":
+  "@swc/types@0.1.19":
     dependencies:
       "@swc/counter": 0.1.3
 
-  "@xmldom/xmldom@0.9.7": {}
+  "@xmldom/xmldom@0.9.8": {}
 
   ansi-styles@4.3.0:
     dependencies:
@@ -2766,12 +2766,12 @@ snapshots:
       - bare-buffer
     optional: true
 
-  bare-os@3.4.0:
+  bare-os@3.5.1:
     optional: true
 
   bare-path@3.0.0:
     dependencies:
-      bare-os: 3.4.0
+      bare-os: 3.5.1
     optional: true
 
   bare-stream@2.6.5(bare-events@2.5.4):
@@ -2799,10 +2799,10 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001700
-      electron-to-chromium: 1.5.101
+      caniuse-lite: 1.0.30001701
+      electron-to-chromium: 1.5.109
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.2(browserslist@4.24.4)
+      update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
   buffer@5.7.1:
     dependencies:
@@ -2811,7 +2811,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001700: {}
+  caniuse-lite@1.0.30001701: {}
 
   chalk@4.1.2:
     dependencies:
@@ -2903,7 +2903,7 @@ snapshots:
 
   dotenv@16.4.7: {}
 
-  electron-to-chromium@1.5.101: {}
+  electron-to-chromium@1.5.109: {}
 
   end-of-stream@1.4.4:
     dependencies:
@@ -3262,7 +3262,7 @@ snapshots:
       tar-fs: 2.1.2
       tunnel-agent: 0.6.0
 
-  prettier@3.5.1: {}
+  prettier@3.5.3: {}
 
   prr@1.0.1:
     optional: true
@@ -3404,7 +3404,7 @@ snapshots:
 
   type-fest@0.20.2: {}
 
-  update-browserslist-db@1.1.2(browserslist@4.24.4):
+  update-browserslist-db@1.1.3(browserslist@4.24.4):
     dependencies:
       browserslist: 4.24.4
       escalade: 3.2.0
