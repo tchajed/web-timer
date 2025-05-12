@@ -32,8 +32,8 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/config-default": "^2.15.0",
-    "@parcel/packager-raw-url": "2.14.4",
-    "@parcel/packager-xml": "2.14.4",
+    "@parcel/packager-raw-url": "2.15.0",
+    "@parcel/packager-xml": "2.15.0",
     "@parcel/transformer-less": "^2.15.0",
     "@parcel/transformer-raw": "^2.15.0",
     "parcel": "^2.15.0",
