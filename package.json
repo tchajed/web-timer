@@ -31,12 +31,12 @@
   "author": "Tej Chajed",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/config-default": "^2.14.4",
+    "@parcel/config-default": "^2.15.0",
     "@parcel/packager-raw-url": "2.14.4",
     "@parcel/packager-xml": "2.14.4",
-    "@parcel/transformer-less": "^2.14.4",
-    "@parcel/transformer-raw": "^2.14.4",
-    "parcel": "^2.14.4",
+    "@parcel/transformer-less": "^2.15.0",
+    "@parcel/transformer-raw": "^2.15.0",
+    "parcel": "^2.15.0",
     "parcel-config-pwa-manifest": "^0.1.6",
     "prettier": "^3.5.3"
   },
