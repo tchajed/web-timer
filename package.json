@@ -34,9 +34,9 @@
     "@parcel/config-default": "^2.15.1",
     "@parcel/packager-raw-url": "2.15.1",
     "@parcel/packager-xml": "2.15.1",
-    "@parcel/transformer-less": "^2.15.0",
-    "@parcel/transformer-raw": "^2.15.0",
-    "parcel": "^2.15.0",
+    "@parcel/transformer-less": "^2.15.1",
+    "@parcel/transformer-raw": "^2.15.1",
+    "parcel": "^2.15.1",
     "parcel-config-pwa-manifest": "^0.1.6",
     "prettier": "^3.5.3"
   },
