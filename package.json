@@ -31,9 +31,9 @@
   "author": "Tej Chajed",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/config-default": "^2.15.0",
-    "@parcel/packager-raw-url": "2.15.0",
-    "@parcel/packager-xml": "2.15.0",
+    "@parcel/config-default": "^2.15.1",
+    "@parcel/packager-raw-url": "2.15.1",
+    "@parcel/packager-xml": "2.15.1",
     "@parcel/transformer-less": "^2.15.0",
     "@parcel/transformer-raw": "^2.15.0",
     "parcel": "^2.15.0",
