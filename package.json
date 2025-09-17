@@ -16,7 +16,7 @@
     "startURL": "./?pwa=true",
     "theme": "#ffffff",
     "generateIconOptions": {
-      "baseIcon": "./public/icon.svg",
+      "baseIcon": "./public/icon.png",
       "sizes": [
         192,
         384,
