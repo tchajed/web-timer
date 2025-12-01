@@ -14,7 +14,7 @@ importers:
         specifier: ^2.16.1
         version: 2.16.1(@parcel/core@2.16.1(@swc/helpers@0.5.17))
       "@parcel/packager-xml":
-        specifier: 2.16.0
+        specifier: ^2.16.0
         version: 2.16.0(@parcel/core@2.16.1(@swc/helpers@0.5.17))
       "@parcel/transformer-less":
         specifier: ^2.16.1
